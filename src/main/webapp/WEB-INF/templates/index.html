@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>欢迎来到SC-30 Lin HOME</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/font-awesome/font-awesome.min.css"/>
+    <link rel='stylesheet' href='/css/bootstrap/jquery-ui.css'/>
+    <link rel='stylesheet' href='/css/index/index.css'/>
+</head>
+<body>
+    <header>
+        <div class="navbar navbar-static-top navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header navbar-inverse">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#example-navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/Admin/index.html" id="logo">WELCOME TO MY SITE</a>
+                <input type="hidden" id="uid" th:value="${id}"/>
+            </div>
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">HOME</a></li>
+                    <li ><a href="#">ABOUT ME</a></li>
+                    <li class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"><a href="#">LOGOUT</a></li>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" >注销</a>
+                        </li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" id="logOut">安全退出</a>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </header>
+    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" style="margin-left: -5px;">
+        <div class="auto-width-to-small" style="margin-top: 55px;">
+            <ul id="main-nav" class="nav nav-tabs nav-stacked">
+                <li class="active">
+                    <a >
+                        <i class="glyphicon glyphicon-th-large"></i>
+                        首页
+                    </a>
+                </li>
+                <li>
+                    <a href="#weiXinSetting" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-cog"></i>
+                        微信公众号管理
+                        <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <ul id="weiXinSetting" class="nav nav-list collapse second-menu" style="height: 0px;">
+                        <li id="weChatSetting"><a ><i class="glyphicon glyphicon-user"></i> 公众号设置</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-th-list"></i> 素材管理</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i> 消息管理</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-send"></i> 推送配置</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-eye-open"></i> 日志查看</a></li>
+                    </ul>
+                </li>
+                <li >
+                    <a id="blog" >
+                        <i class="glyphicon glyphicon-credit-card" ></i>
+                        我的博客
+                    </a>
+                </li>
+                <li>
+                    <a href="#systemSetting" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-cog"></i>
+                        系统管理
+                        <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <ul id="systemSetting" class="nav nav-list collapse second-menu" style="height: 0px;">
+                        <li><a href="#"><i class="glyphicon glyphicon-user"></i> 用户管理</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-th-list"></i> 菜单管理</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i> 角色管理</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-edit"></i> 修改密码</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-eye-open"></i> 日志查看</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./grid.html">
+                        <i class="glyphicon glyphicon-globe"></i>
+                        分发配置
+                        <span class="label label-warning pull-right">5</span>
+                    </a>
+                </li>
+                <li>
+                    <a >
+                        <i class="glyphicon glyphicon-calendar"></i>
+                        图表统计
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-fire"></i>
+                        关于系统
+                    </a>
+                </li>
+            </ul>
+
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4 img-bottom" style="margin-left: -5px;">
+                <div class="row welcome" ><label>欢迎关注我的微信公众号^-^</label></div>
+                <img src="/images/weixin.png">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-10 col-md-10 col-sm-9 col-xs-8" id="content"
+                 style="overflow:hidden;background-color: whitesmoke;margin-top: 55px;">
+                主窗口主窗口主窗口主窗口主窗口主窗口主窗口主窗口主窗口主窗口主窗口主窗口主窗口<br>主窗口<br>主窗口<br>主窗口<br>
+            </div>
+        </div>
+    </div>
+
+    <script src="/lib/jquery.js"></script>
+    <script src="/lib/jquery.form.js"></script>
+    <script src="/lib/bootstrap/bootstrap.min.js"></script>
+    <script src="/js/index/index.js"></script>
+</body>
+</html>

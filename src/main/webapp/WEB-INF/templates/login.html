@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>欢迎来到SC-30 Lin</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/font-awesome/font-awesome.min.css"/>
+    <link rel='stylesheet' href='/css/bootstrap/jquery-ui.css'/>
+    <link rel="stylesheet" href="/css/bootstrap/style.css" media="screen"/>
+</head>
+<body class="login-page">
+<div class="container-fluid login-form">
+    <div class="login-content">
+        <div class="form-login-error">
+            <h3>Invalid login</h3>
+            <p>Enter <strong>demo</strong>/<strong>demo</strong> as login and password.</p>
+        </div>
+        <form role="form" id="form_login" >
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <input type="text" class="form-control" name="name" id="username" placeholder="Username"
+                           autocomplete="off" th:value="${user.name}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fa fa-key"></i>
+                    </div>
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Password"
+                           autocomplete="off" th:value="${user.password}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary btn-block btn-login">
+                    <i class="fa fa-sign-in"></i>
+                    Login In
+                </button>
+            </div>
+            <!-- Implemented in v1.1.4 -->
+            <div class="form-group">
+                <em>- or -</em>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-default btn-lg btn-block facebook-button">
+                    &#160;&#160;
+                    <i class="fa fa-facebook"></i>
+                    | Login with Mail
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="/lib/modernizr.js"></script>
+<script src="/lib/jquery.js"></script>
+<script src="/lib/jquery.form.js"></script>
+<script src="/lib/bootstrap/bootstrap.min.js"></script>
+<script src="/lib/layer/layer.js"></script>
+<script src="/js/login/login.js"></script>
+</body>
+</html>

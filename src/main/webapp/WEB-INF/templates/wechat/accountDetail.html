@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/wx-account-setting/weiXinSetting.css" />
+</head>
+<body>
+<div class="account_setting_area" id="settingArea">
+    <ul>
+        <li class="account_setting_item wrp_pic_item_spe2">
+            <h3 class="sub_title">公开信息</h3>
+        </li>
+        <li class="account_setting_item wrp_pic_item_spe2">
+            <h4>头像</h4>
+            <div class="meta_opr"><a id="changeHeadImg" data-toggle="modal" href="#myPic">修改头像</a>
+                <p class="desc">一个月头像只能申请修改5次</p></div>
+            <div class="meta_content">
+                <img class="meta_pic" style="height: 80px;width: 80px" th:src="${url}"/>
+            </div>
+        </li>
+        <li class="account_setting_item wrp_pic_item_spe1">
+            <h4>二维码</h4>
+            <div class="meta_opr"><a id="more_size" class="more_size" href="javascript:;">下载更多尺寸</a></div>
+            <div class="meta_content">
+                <a target="_blank" class="verifyInfo" title="点击下载" href="">
+                    <img src="" class="qrcode_pic" width="90" height="90"/>
+                </a>
+            </div>
+        </li>
+        <li class="account_setting_item">
+            <h4>名称</h4>
+            <div class="meta_opr">
+                <a id="js_btn_rename" href="javascript:;">修改</a>
+                <p class="desc"> 个人类帐号一个自然年内可主动修改两次名称 </p>
+                <p class="desc">查看<a href="javascript:;" id="js_btn_rename_history">改名记录</a></p>
+            </div>
+            <div class="meta_content" style="height: 60px"> 实习者</div>
+        </li>
+        <li class="account_setting_item">
+            <h4>微信号</h4>
+            <div class="meta_opr"><a id="setWeChatID" class="btnGrayS" href="javascript:;">设置微信号</a></div>
+            <div class="meta_content" style="height: 20px"></div>
+        </li>
+        <li class="account_setting_item">
+            <h4>类型</h4>
+            <div class="meta_content"> 订阅号</div>
+        </li>
+        <li class="account_setting_item">
+            <h4>介绍</h4>
+            <div class="meta_opr"><a id="modifyUserInfo" href="javascript:;">修改</a>
+                <p class="desc">一个月内功能介绍只能申请修改5次</p></div>
+            <div class="meta_content" style="height: 40px"> 没那么多的道理，实习者来了</div>
+        </li>
+        <li class="account_setting_item">
+            <h4>认证情况</h4>
+            <div class="meta_opr verify"><a
+                    href="">申请微信认证</a>
+            </div>
+            <div class="meta_content"> 未认证</div>
+        </li>
+        <li class="account_setting_item"><h4>所在地址</h4>
+            <div class="meta_opr"><a
+                    href="">设置</a></div>
+            <div class="meta_content" style="height: 20px"></div>
+        </li>
+        <li class="account_setting_item"><h4>主体信息</h4>
+            <div class="meta_opr"><a
+                    href="">详情</a>
+                <a class="js_transfer" href="javascript:void(0);">帐号迁移</a></div>
+            <div class="meta_content">林**&nbsp;<span class="mini_tips weak_text">(个人)</span></div>
+        </li>
+        <li class="account_setting_item weapplink"><h4>相关小程序</h4>
+            <div class="meta_opr">
+                <div id="bind_weapp_first" style=""><p><a
+                        href="" class="">添加</a>
+                </p></div>
+                <div id="bind_weapp_other" style="display:none;"><p><a
+                        href="" type="operator" class="">详情</a>
+                </p>
+                    <p><a target="_blank" download="" href="">下载线下物料</a>
+                    </p></div>
+            </div>
+            <div class="meta_content link_weapp_container"><span class="weapplink_nodata">暂无相关小程序</span></div>
+        </li>
+    </ul>
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myPic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">修改头像</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form" method="post" enctype="multipart/form-data" id="file-form">
+                        <input type="file" name="file" id="file" class="form-control">
+                        <span>支持jpg、jpeg、gif、png、bmp格式的图片</span>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="submit">提交更改</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+</body>
+<script src="/js/wx-account-setting/accountDetail.js"></script>
+</html>

@@ -1,0 +1,130 @@
+#main-nav {
+    margin-left: 1px;
+}
+#main-nav.nav-tabs.nav-stacked > li > a {
+    padding: 10px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #4A515B;
+    background: #E9E9E9;
+    background: -moz-linear-gradient(top, #FAFAFA 0%, #E9E9E9 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FAFAFA), color-stop(100%,#E9E9E9));
+    background: -webkit-linear-gradient(top, #FAFAFA 0%,#E9E9E9 100%);
+    background: -o-linear-gradient(top, #FAFAFA 0%,#E9E9E9 100%);
+    background: -ms-linear-gradient(top, #FAFAFA 0%,#E9E9E9 100%);
+    background: linear-gradient(top, #FAFAFA 0%,#E9E9E9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAFAFA', endColorstr='#E9E9E9');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAFAFA', endColorstr='#E9E9E9')";
+    border: 1px solid #D5D5D5;
+    border-radius: 4px;
+    cursor:pointer;
+}
+#main-nav.nav-tabs.nav-stacked > li > a > span {
+    color: #4A515B;
+    cursor:pointer;
+}
+#main-nav.nav-tabs.nav-stacked > li.active > a, #main-nav.nav-tabs.nav-stacked > li > a:hover {
+    color: #FFF;
+    background: #3C4049;
+    background: -moz-linear-gradient(top, #4A515B 0%, #3C4049 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4A515B), color-stop(100%,#3C4049));
+    background: -webkit-linear-gradient(top, #4A515B 0%,#3C4049 100%);
+    background: -o-linear-gradient(top, #4A515B 0%,#3C4049 100%);
+    background: -ms-linear-gradient(top, #4A515B 0%,#3C4049 100%);
+    background: linear-gradient(top, #4A515B 0%,#3C4049 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4A515B', endColorstr='#3C4049');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#4A515B', endColorstr='#3C4049')";
+    border-color: #2B2E33;
+    border-radius: 4px;
+    cursor:pointer;
+}
+#main-nav.nav-tabs.nav-stacked > li.active > a, #main-nav.nav-tabs.nav-stacked > li > a:hover > span {
+    color: #FFF;
+    cursor:pointer;
+}
+#main-nav.nav-tabs.nav-stacked > li {
+    margin-bottom: 4px;
+}
+/*定义二级菜单样式*/
+.second-menu a {
+    font-size: 10px;
+    color: #4A515B;
+    text-align: left;
+    margin-left: 20px;
+    width: 80%;
+}
+a:hover {
+    cursor:pointer;
+}
+.navbar-static-top {
+    background-color: #212121;
+    margin-bottom: 5px;
+}
+.navbar-brand {
+    background: url('') no-repeat 10px 8px;
+    display: inline-block;
+    vertical-align: middle;
+    /*padding-left: 50px;*/
+    color: #fff;
+}
+.auto-width-to-small > ul{
+    position: fixed;
+}
+.img-bottom{
+    position:fixed;
+    bottom: 5px;
+    font-size: 10px;
+    margin-left: -20px;
+}
+@media (max-width: 768px) {
+    .auto-width-to-small > ul{
+        width: 28.5%;
+    }
+    .col-xs-4{
+        padding-left: 10px;
+    }
+    .second-menu a{
+        margin-left: 5px;
+    }
+    .img-bottom > img{
+        width: 65%;
+        height: 65%;
+        margin-left:18px;
+    }
+    .img-bottom{
+        position:fixed;
+        bottom: 5px;
+        font-size: 10px;
+        margin-left: -13px;
+    }
+    label{
+        margin-left: 10px;
+    }
+}
+@media (min-width: 768px) {
+    .auto-width-to-small > ul{
+        width: 22%;
+    }
+    .img-bottom > img{
+        width: 38%;
+        height: 38%;
+    }
+    .welcome {
+        text-align: left;
+        margin-left: 0px;
+    }
+}
+
+@media (min-width: 992px) {
+    .auto-width-to-small > ul{
+        width: 15.2%;
+    }
+    .img-bottom > img{
+        width: 50%;
+        height: 50%;
+    }
+    .welcome {
+        text-align: left;
+        margin-left: 0px;
+    }
+}

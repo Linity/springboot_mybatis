@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" rel="stylesheet" href="/lib/summernote/summernote.css"/>
+</head>
+<body>
+    <div style="margin-top: 20px;border-bottom: 1px solid #ddd;padding-left: 5px;padding-bottom: 3px">
+        <span>文章标题</span>
+    </div>
+    <div style="margin-top: 10px">
+        <form class="form-inline" role="form">
+            <select class="form-control">
+                <option>请选择</option>
+                <option>原创</option>
+                <option>转载</option>
+                <option>翻译</option>
+            </select>
+            <input class="form-control" style="margin-left: 20px;width: 40%;"/>
+        </form>
+    </div>
+    <div style="margin-top: 20px;margin-bottom: 3px;padding-left: 5px;"><span>文章内容</span></div>
+    <div id="summerNote"></div>
+    <div id="type-select">
+        <span>添加分类 </span><a href="/blog/indexType" target="_blank">[编辑分类]</a>
+        <input class="form-control" />
+    </div>
+    <div style="margin-top: 20px;">
+        <button class="btn btn-primary" style="margin-right: 10px">发表文章</button>
+        <button class="btn btn-primary" style="margin-right: 10px">立即保存</button>
+        <button class="btn btn-primary" style="margin-right: 10px">舍弃</button>
+    </div>
+</body>
+<script src="/lib/summernote/summernote.min.js"></script>
+<script src="/lib/summernote/lang/summernote-zh-CN.js"></script>
+<script src="/js/blog/addArticle.js"></script>
+</html>

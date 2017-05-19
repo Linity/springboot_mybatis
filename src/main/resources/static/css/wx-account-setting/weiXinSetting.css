@@ -1,0 +1,48 @@
+.account_setting_area ul {
+    list-style-type: none;
+    padding-left: 0px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+}
+.account_setting_item {
+    border-top: 1px solid #e7e7eb;
+    padding: 18px 20px;
+}
+.account_setting_item p {
+    margin-bottom: 1px;
+}
+.account_setting_item.wrp_pic_item_spe1 {
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+.account_setting_item.wrp_pic_item_spe2 {
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+.account_setting_item h4 {
+    line-height: 0.2;
+    float: left;
+    width: 100px;
+    margin-right: 20px;
+    font-weight: 400;
+    font-style: normal;
+    color: #8d8d8d;
+}
+.account_setting_item .meta_opr {
+    float: right;
+    margin-left: 16px;
+    word-wrap: break-word;
+    word-break: break-all;
+    text-align: right;
+    color: #8d8d8d;
+    height: auto;
+}
+.account_setting_item .meta_content {
+    display: table-cell;
+    vertical-align: top;
+    float: none;
+    width: auto;
+    height: auto;
+    word-wrap: break-word;
+    word-break: break-all;
+}
